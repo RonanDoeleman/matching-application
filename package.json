@@ -1,0 +1,24 @@
+{
+  "name": "matching-application",
+  "version": "1.0.0",
+  "description": "Matching application ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RonanDoeleman/matching-application.git"
+  },
+  "author": "Ronan Doeleman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RonanDoeleman/matching-application/issues"
+  },
+  "homepage": "https://github.com/RonanDoeleman/matching-application#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "slug": "^8.2.2"
+  }
+}
