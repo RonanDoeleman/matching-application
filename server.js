@@ -4,14 +4,32 @@ const port = 3000
 const path = require('path');
 const ejs = require('ejs');
 
+// ******************
+// - Middleware
+// ******************
+
 app.use(express.static('public'));
 
+app.set('view engine', 'ejs');
+
+app.get('/', (req, res) => {
+  res.render('index', { title: 'Hey', message: 'Hello there!' })
+})
 
 
 
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, '/public/index.html'));
-  });  
+// ******************
+// - Setup default page
+// ******************
+
+// app.get('/', function(req, res) {
+//     res.sendFile(path.join(__dirname, '/public/index.html'));
+//   });  
+
+
+// ******************
+// - Routing
+// ******************
 
 app.get('/about', (req, res) => {
     res.send('about')

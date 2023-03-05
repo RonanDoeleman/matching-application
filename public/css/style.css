@@ -1,8 +1,82 @@
+body{
+    background-color: #eee;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
 h1{
     color: blue;
     font-size: 3em;
 }
 
-body{
-    background-color: pink;
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 1em;
+    justify-content: flex-end;
+}
+
+nav li a {
+    color: crimson;
+    display: block;
+    font-size: 1em;
+    height: 30px;
+    letter-spacing: 1px;
+    margin: 0 20px;
+    padding: 0 4px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
+
+nav li a:before, nav li a:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -1px;
+    background: crimson;
+  }
+  
+nav li a:before {
+    left: 0;
+    transition: 0.5s;
+  }
+  
+nav li a:after {
+    background: crimson;
+    right: 0;
+  }
+  
+nav li a:hover:before {
+    background: crimson;
+    width: 100%;
+    transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+  }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1em;
+    background: rgb(30, 30, 30);
+    text-align: center;
+}
+
+footer a{
+    color: white;
+}
+
+.inner {
+    margin-bottom: 4em;
+}
+
+.columns {
+    display: flex;
+}
+
+.columns > * {
+    padding: 1em;
 }
