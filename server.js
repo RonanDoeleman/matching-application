@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const port = 3000
 const path = require('path');
+let ejs = require('ejs');
+
 
 // ******************
 // - Middleware
@@ -30,28 +32,27 @@ app.get('/', (req, res) => {
 app.set('view engine', 'ejs');
 
 
-let ejs = require('ejs');
-let people = ['geddy', 'neil', 'alex'];
-let html = ejs.render('<%= people.join(", "); %>', {people: people});
-
-
 
 // ******************
 // - Routing
 // ******************
 
-app.get('/about', (req, res) => {
-    res.render('about', {text: 'This is the about page'})
+
+app.get('/profile', (req, res) => {
+    res.render('profile', { text: 'Ronan'})
 })
 
-app.get('/matching', (req, res) => {
-    res.send('matching')
+app.get('/matchmaker', (req, res) => {
+  res.render('matchmaker', { text: 'Ronan!'})
+})
+
+app.get('/about', (req, res) => {
+  res.render('about', {text: 'This is the about page'})
 })
 
 app.get('/contact', (req, res) => {
   res.render('contact', {text: 'This is the contact page'})
 })
-
 
 // ******************
 // - 404 Error handler, if no page is found

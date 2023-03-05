@@ -6,13 +6,25 @@ body{
 
 /* Header Styling */
 
+nav{
+    background-color: rgb(30, 30, 30);
+}
+
+img{
+    width: 50px;
+    height: 50px;
+    margin-top: .8em;
+    margin-left: 5%;
+    float: left;
+    cursor: pointer;
+}
+
 nav ul {
     display: flex;
     list-style: none;
     padding: 1.5em 1em;
     margin-top: 0;
     justify-content: flex-end;
-    background-color: rgb(30, 30, 30);
 }
 
 nav li a {
@@ -55,11 +67,22 @@ nav li a:hover:before {
     transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
 }
 
+
+
 /* Body Styling */
 
 h1{
     font-size: 3em;
 }
+
+.index-page,
+.profile-page,
+.about-page,
+.contact-page,
+.matchmaker-page {
+    padding: 2em;
+}
+
 
 /* Footer Styling */
 
