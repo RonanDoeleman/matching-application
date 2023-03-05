@@ -1,24 +1,25 @@
 body{
-    background-color: #eee;
+    background-color: rgb(240, 240, 240);
     font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
-h1{
-    color: blue;
-    font-size: 3em;
-}
+/* Header Styling */
 
 nav ul {
     display: flex;
     list-style: none;
     padding: 1em;
+    margin-top: 0;
     justify-content: flex-end;
+    background-color: white;
 }
 
 nav li a {
     color: crimson;
     display: block;
     font-size: 1em;
+    font-weight: bold;
     height: 30px;
     letter-spacing: 1px;
     margin: 0 20px;
@@ -36,24 +37,37 @@ nav li a:before, nav li a:after {
     width: 0%;
     height: 2px;
     bottom: -1px;
-    background: crimson;
-  }
+}
   
 nav li a:before {
     left: 0;
     transition: 0.5s;
-  }
+}
   
 nav li a:after {
     background: crimson;
     right: 0;
-  }
+}
   
 nav li a:hover:before {
     background: crimson;
     width: 100%;
     transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
-  }
+}
+
+/* Body Styling */
+
+h1{
+    font-size: 3em;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+}
+
+
+/* Footer Styling */
 
 footer {
     position: fixed;
@@ -67,16 +81,9 @@ footer {
 
 footer a{
     color: white;
+    text-decoration: none;
 }
 
 .inner {
     margin-bottom: 4em;
-}
-
-.columns {
-    display: flex;
-}
-
-.columns > * {
-    padding: 1em;
 }
