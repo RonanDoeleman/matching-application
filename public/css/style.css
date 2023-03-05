@@ -45,12 +45,12 @@ nav li a:before {
 }
   
 nav li a:after {
-    background: crimson;
+    background: rgb(255, 55, 95);
     right: 0;
 }
   
 nav li a:hover:before {
-    background: crimson;
+    background: rgb(255, 55, 95);
     width: 100%;
     transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
 }
