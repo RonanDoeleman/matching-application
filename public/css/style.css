@@ -1,3 +1,8 @@
 h1{
-    color: red;
+    color: blue;
+    font-size: 3em;
+}
+
+body{
+    background-color: pink;
 }
