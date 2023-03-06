@@ -10,7 +10,7 @@ nav{
     background-color: rgb(30, 30, 30);
 }
 
-img{
+.wrapper img{
     width: 50px;
     height: 50px;
     margin-top: .8em;
@@ -83,6 +83,41 @@ h1{
     padding: 2em;
 }
 
+.my-profile{
+    border: 1px solid grey;
+    display: flex;
+}
+
+.my-profile img{
+    width: 200px;
+    height: 260px;
+}
+
+.my-profile ul{
+    list-style: none;
+}
+
+.my-profile ol{
+    list-style: none;
+}
+
+.my-profile ul li,
+.my-profile ol li{
+    font-size: 1.2em;
+}
+
+.my-profile ul li,
+.my-profile ol li{
+    margin-top: .8em;
+}
+
+.my-profile ul::before,
+.my-profile ol::before {
+    content:attr(label);
+    font-size: 1.5em;
+    font-weight: bold;
+    font-style: italic;
+}
 
 /* Footer Styling */
 
