@@ -12,9 +12,24 @@
 
         <h1>Hi Ronan</h1>
         <h2>Welcome to the new dating app for festival lovers!</h2>
+        <div>
+            <h2>Find new matches:</h2>
+            <% if (matches.length > 0) { %>
+                <% matches.forEach(match => {%>
+                
+                    <h2><%= match.name %></h2>
+                    <p><%= match.age %></p>
+
+                <% }) %>
+                <% }else { %>
+
+                <p>There are no matches available right now...</p>
+                <% } %>
+                
+        </div>
 
     </section>
     
 
-    <%- include('includes/footer.ejs') -%>
+    <%- include('includes/footer.ejs'); -%>
 </body>
