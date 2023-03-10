@@ -1,0 +1,45 @@
+<!doctype html>
+
+<head>
+    <link rel="stylesheet" type="text/css"   href="/css/style.css">    
+    <title>Matching Application</title>
+</head>
+
+<body>
+    <%- include('includes/header'); -%>
+
+    <section class="matches-page">
+
+        <h1>Hi Ronan</h1>
+        <h2>Welcome to the new dating app for festival lovers!</h2>
+
+        <div class="potential-match">
+            <h2>Find new matches:</h2>
+            <% if (matches.length > 0) { %>
+                <% matches.forEach(match => {%>
+                
+                    <div class="profile-match">
+                        <img src='<%= match.image %>' alt='profile picture match'></img>
+                        <div class="profile-metadata">
+                            <h2><%= match.name %></h2>
+                            <p><strong><%= match.location %></strong>, <%= match.age %></p>
+                            <p><strong>Genres:</strong> <%= match.genres %></p>
+                            <p><strong>Festivals:</strong> <%= match.favfestivals %></p>
+                            <p>"<%= match.bio %>"</p>
+                        </div>
+                    </div>
+                    
+
+                <% }) %>
+                <% }else { %>
+
+                <p>There are no matches available right now...</p>
+                <% } %>
+                
+        </div>
+
+    </section>
+    
+
+    <%- include('includes/footer.ejs'); -%>
+</body>

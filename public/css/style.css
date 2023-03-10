@@ -92,11 +92,16 @@ h1{
 }
 
 .index-page,
+.matches-page,
 .profile-page,
 .about-page,
 .contact-page,
 .matchmaker-page {
     padding: 2em;
+}
+
+.about-page p{
+    max-width: 70%;
 }
 
 .my-profile{
