@@ -75,6 +75,22 @@ h1{
     font-size: 3em;
 }
 
+.potential-match img{
+    width: 150px;
+    height: 200px
+}
+
+.profile-match{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid grey;
+    margin-bottom: 1em;
+}
+
+.profile-metadata{
+    margin-left: 1em;
+}
+
 .index-page,
 .profile-page,
 .about-page,
@@ -118,6 +134,7 @@ h1{
     font-weight: bold;
     font-style: italic;
 }
+
 
 /* Footer Styling */
 

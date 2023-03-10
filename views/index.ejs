@@ -12,13 +12,23 @@
 
         <h1>Hi Ronan</h1>
         <h2>Welcome to the new dating app for festival lovers!</h2>
-        <div>
+
+        <div class="potential-match">
             <h2>Find new matches:</h2>
             <% if (matches.length > 0) { %>
                 <% matches.forEach(match => {%>
                 
-                    <h2><%= match.name %></h2>
-                    <p><%= match.age %></p>
+                    <div class="profile-match">
+                        <img src='<%= match.image %>' alt='profile picture match'></img>
+                        <div class="profile-metadata">
+                            <h2><%= match.name %></h2>
+                            <p><strong><%= match.location %></strong>, <%= match.age %></p>
+                            <p><strong>Genres:</strong> <%= match.genres %></p>
+                            <p><strong>Festivals:</strong> <%= match.favfestivals %></p>
+                            <p>"<%= match.bio %>"</p>
+                        </div>
+                    </div>
+                    
 
                 <% }) %>
                 <% }else { %>
