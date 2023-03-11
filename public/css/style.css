@@ -76,8 +76,8 @@ h1{
 }
 
 .potential-match img{
-    width: 150px;
-    height: 200px
+    width: 180px;
+    height: 250px
 }
 
 .profile-match{
@@ -89,6 +89,24 @@ h1{
 
 .profile-metadata{
     margin-left: 1em;
+}
+
+.radio-buttons{
+    display: flex;
+    flex-direction: end;
+}
+
+.like-button img,
+.dislike-button img{
+    width: 50px;
+    height: 50px;
+}
+
+div.like-button,
+div.dislike-button{
+    align-self: center;
+    justify-content: flex-end;
+    padding: 2em;
 }
 
 .index-page,

@@ -26,11 +26,11 @@ app.set("view engine", "ejs");
 // ******************
 
 app.get('/', (req, res) => {
-  res.render('Index', { text: 'Ronan'})
+  res.render('index', { text: 'Ronan,'})
 });
 
 app.get('/profile', (req, res) => {
-    res.render('profile', { text: 'Ronan'})
+    res.render('profile', { text: 'Ronan,'})
 });
 
 app.get('/about', (req, res) => {

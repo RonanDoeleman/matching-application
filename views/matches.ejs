@@ -10,7 +10,7 @@
 
     <section class="matches-page">
 
-        <h1>Hi Ronan</h1>
+        <h1>Hi Ronan,</h1>
         <h2>Here you can find potential matches!</h2>
 
         <div class="potential-match">
@@ -19,14 +19,28 @@
                 <% matches.forEach(match => {%>
                 
                     <div class="profile-match">
-                        <img src='<%= match.image %>' alt='profile picture match'></img>
+                        <img src="<%= match.image %>" alt="profile picture match"></img>
                         <div class="profile-metadata">
                             <h2><%= match.name %></h2>
                             <p><strong><%= match.location %></strong>, <%= match.age %></p>
                             <p><strong>Genres:</strong> <%= match.genres %></p>
                             <p><strong>Festivals:</strong> <%= match.favfestivals %></p>
-                            <p>"<%= match.bio %>"</p>
+                            <p><strong>Bio: </strong>"<%= match.bio %>"</p>
                         </div>
+                        <div class="radio-buttons">
+                            <div class="like-button">
+                                <input type="radio" id="like" name="match?" value="Like"
+                                       checked>
+                                <label for="like"><img src="/images/heart.png"/></label>
+                              </div>
+                            <div class="dislike-button">
+                                <input type="radio" id="dislike" name="match?" value="Dislike"
+                                       checked>
+                                <label for="dislike"><img src="/images/close.png" /></label>
+                              </div>
+
+                        </div>
+                        
                     </div>
                     
 
