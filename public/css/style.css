@@ -72,19 +72,88 @@ nav li a:hover:before {
 /* Body Styling */
 
 h1{
-    font-size: 3em;
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.5em;
 }
 
-.potential-match img{
-    width: 180px;
-    height: 250px
+.btn-find-match {
+  align-items: center;
+  background: linear-gradient(135deg, hsla(348, 100%, 61%, 1) 0%, hsla(326, 100%, 78%, 1) 100%);
+  color: #FFFFFF;
+  font-weight: bold;
+  border-radius: 8px;
+  display: flex;
+  font-size: 1.2em;
+  justify-content: center;
+  line-height: 1em;
+  padding: 19px 24px;
+  margin-top: 2em;
+  max-width: 15em;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.profile-match{
+.potential-match  {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    padding: 0 4em;
+}
+
+.profile-match-container {
+    height: 70vh;
+    aspect-ratio: 2/3;
+    position: relative;
+}
+
+
+.profile-match {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
     border: 1px solid grey;
-    margin-bottom: 1em;
+    background-color: #eeeeee;
+    height: 100%;
+    width:100%;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.profile-match .like-button,
+.profile-match .dislike-button {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border: none;
+}
+
+.profile-match .like-button img,
+.profile-match .dislike-button  img{
+    width: 100%;
+    height: auto;
+}
+
+.profile-match .image-container {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    
+}
+
+.profile-match .image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-top: -5em;
+    
 }
 
 .profile-metadata{
@@ -93,20 +162,16 @@ h1{
 
 .radio-buttons{
     display: flex;
-    flex-direction: end;
+    right: 0;
 }
 
-.like-button img,
-.dislike-button img{
+.radio-buttons img{
     width: 50px;
     height: 50px;
 }
 
-div.like-button,
-div.dislike-button{
-    align-self: center;
-    justify-content: flex-end;
-    padding: 2em;
+div.radio-buttons{
+    align-items: center;
 }
 
 .index-page,
@@ -173,7 +238,10 @@ footer {
 
 footer a{
     color: white;
+    text-transform: uppercase;
     text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
 }
 
 .inner {
