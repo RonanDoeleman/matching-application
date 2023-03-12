@@ -1,10 +1,27 @@
+require('dotenv').config()
 const { Router } = require('express');
 const express = require('express');
 const router = express.Router();
 const app = express();
-const port = 3000
-// const path = require('path');
-// let ejs = require('ejs');
+const port = 3000;
+const userRouter = require('./public/routes/matches')
+const path = require('path');
+let ejs = require('ejs');
+const mongoose = require('mongoose');
+
+
+
+async function main() {
+  await mongoose.connect(`mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}${process.env.DATABASE_URI}`,{
+    dbName: process.env.DATABASE_NAME,
+  });
+  console.log("Succesfully connected")
+}
+main().catch(err => console.log(err));
+
+
+
+
 
 
 // ******************
@@ -41,7 +58,6 @@ app.get('/contact', (req, res) => {
   res.render('contact', {text: 'This is the contact page'})
 });
 
-const userRouter = require('./public/routes/matches')
 
 app.use('/matches', userRouter)
 
