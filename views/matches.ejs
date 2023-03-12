@@ -14,7 +14,7 @@
 
         <div class="potential-match">
             <div class="profile-match-container">
-            <% if (potentialMatches.length > 0) { %>
+            <% if (potentialMatches && potentialMatches?.length > 0) { %>
                 <% potentialMatches.map(match => {%>
                
                     <div class="profile-match" >
@@ -28,7 +28,7 @@
                             <p><strong>Festivals:</strong> <%= match.favfestivals %></p>
                             <p><strong>Bio: </strong>"<%= match.bio %>"</p>
                         </div>
-                        <form action="/like" method="post" class="button-container">
+                        <form action="/match" method="post" class="button-container">
                             <button class="dislike-button" type="submit" value="dislike" name="matchButton" >
                                 <img src="/images/close.png" />
                             </button>
@@ -39,7 +39,7 @@
                     </div>
                 
                 <% }) %>
-                <% }else { %>
+                <% } else { %>
 
                 <p>There are no matches available right now...</p>
                 <% } %>
