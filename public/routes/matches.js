@@ -1,45 +1,42 @@
 const express = require('express')
 const router = express.Router()
-const mongoose = require('mongoose');
 
-const matchSchema = new mongoose.Schema({
-    _id: String,
-    id: Number,
-    image: String,
-    name: String,
-    location: String,
-    age: String,
-    genres: [String],
-    favfestivals: [String],
-    bio: String,
-    matches: [{id:String, hasLiked:Boolean}]
-  });
-  
-const Matches =  mongoose.model('Matches', matchSchema, "MatchesData");
-
+const { Match }  = require('./matchSchema')
 
 router.get('/', async (req, res) => {
     try {
-        const potentialMatches = await Matches.find();
+        const potentialMatches = await Match.find();
+        potentialMatches.shift()
         res.render('matches', {name: 'Find Match', potentialMatches})
       } catch (error) {
-        throw new Error(error)
+        console.error(error)
       }
 });
+
+router.post('/match', async (req, res) => {
+  const matchButton = req.body.matchButton;
+  const addMatch = JSON.parse(matchButton);
+ 
+  if(addMatch!== false) {
+    try {
+       await Match.findOneAndUpdate({id: 6}, {$addToSet:{matches: addMatch}}, {
+        new: true
+      })
+
+      
+    } catch(error) {
+      console.error(error)
+    }
   
-router.get('/new', (req, res) => {
+    res.redirect('/matches')
+  }
+ 
+})
+  
+router.delete('/profile', (req, res) => {
     res.send('Match New Form')
 })
  
-router.post('/', (req, res) => {
-    res.send('Create Match')
-})
-
-router.post('/match', async (req, res, next) => {
-    const matchButton = req.body.matchButton
-    console.log(matchButton)
-    res.redirect('/matches')
-  })
 
 router
     .route('/:id')
