@@ -10,38 +10,50 @@
 
 
     <section class="profile-page">
-
-        <h1>Hi <%- text -%></h1>
+        <% if (profile) { %>
+        <h1>Hi <%= profile.name %>,</h1>
 
         <section class="my-profile">
 
-            <img src="/images/profile-picture.jpg" alt="Profielfoto Ronan" >
+            <img src=<%= profile.image %> alt=<%= profile.name %> >
 
             <ul label="About Me">
                 
-                <li>28</li>
-                <li>Amsterdam</li>
-                <li>The Netherlands</li>
+                <li><%= profile.age %></li>
+                <li><%= profile.location %></li>
             </ul>
             
             <ol label="Genres">
-                <li>Techno</li>
-                <li>Industrial</li>
-                <li>Hip-Hop</li>
+                <% profile.genres.forEach(genre => {%>
+                    <li><%= genre %></li>
+                <% }) %>
             </ol>
 
             <ol label="Festivals">
-                <li>Rotterdam Rave</li>
-                <li>Soenda</li>
-                <li>Smeerboel</li>
-                <li>Verknipt</li>
-                <li>Woo Hah</li>
+                <% profile.favfestivals.forEach(festival => {%>
+                    <li><%= festival %></li>
+                <% }) %>
             </ol>
 
         </section>
+        <% } %>
 
+        <% if (matches) { %>
         <h2>My matches:</h2>
+        <Section>
+            <% matches.forEach(match => { %>
+            <Article>
+                <img src=<%= match.image %> alt=<%= match.name %>/>
+                <p><%= match.name %></p>
+                <form action="/removeFromMatches" method="post" class="button-container">
+                    <button name="removeMatchButton" type="submit" value="<%= match.id %>" >Delete</button>
+                </form>
+            </Article>
+            <% }) %>
+        </Section>
+        <% } %>
 
+        
     </section>
 
 
