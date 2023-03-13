@@ -14,42 +14,48 @@
 
         <div class="potential-match">
             <div class="profile-match-container">
-            <% if (potentialMatches && potentialMatches.length > 0) { %>
-                <% potentialMatches.forEach(match => {%>
-               
-                    <div class="profile-match" >
-                        <div class="image-container">
-                        <img src="<%= match.image %>" alt="profile picture match"></img>
-                    </div>
-                        <div class="profile-metadata">
-                            <h2><%= match.name %></h2>
-                            <p><strong><%= match.location %></strong>, <%= match.age %></p>
-                            <p><strong>Genres:</strong> <%= match.genres.join(", ") %></p>
-                            <p><strong>Festivals:</strong> <%= match.favfestivals.join(", ") %></p>
-                            <p><strong>Bio: </strong>"<%= match.bio %>"</p>
+                <% if (potentialMatches && potentialMatches.length > 0) { %>
+                    <% potentialMatches.forEach(match => {%>
+                   
+                        <div class="profile-match" >
+                            <div class="image-container">
+                                <img src="<%= match.image %>" alt="profile picture match"></img>
+                            </div>
+                            <div class="profile-metadata">
+                                <h2><%= match.name %></h2>
+                                <p><strong><%= match.location %></strong>, <%= match.age %></p>
+                                <p><strong>Genres:</strong> <%= match.genres.join(", ") %></p>
+                                <p><strong>Festivals:</strong> <%= match.favfestivals.join(", ") %></p>
+                                <p><strong>Bio: </strong>"<%= match.bio %>"</p>
+                            </div>
+                            <form action="/matches/match" method="post" class="button-container">
+                                <!-- <button class="dislike-button" type="submit" value="false" name="matchButton" >
+                                    <img src="/images/close.png" />
+                                </button> -->
+                                <button class="like-button" type="submit" value="<%= match.id %>" name="matchButton">
+                                    <img src="/images/heart.png"/>
+                                    
+                                </button>
+                            </form>
                         </div>
-                        <form action="/matches/match" method="post" class="button-container">
-                            <button class="dislike-button" type="submit" value="false" name="matchButton" >
-                                <img src="/images/close.png" />
-                            </button>
-                            <button class="like-button" type="submit" value="<%= match.id %>" name="matchButton">
-                                <img src="/images/heart.png"/>
-                            </button>
-                        </form>
-                    </div>
-                
-                <% }) %>
-                <% } else { %>
 
-                <p>There are no matches available right now...</p>
-                <% } %>
-
-                </div>
-                
-        </div>
+                        <!-- <form action="/matches/next-person" method="post" class="button-container">
+                            <button type="submit" value="<%= match.id %>" name="nextButton" >
+                                Next
+                            </button>
+                        </form> -->
+                    
+                    <% }) %>
+                    <% } else { %>
+    
+                    <p>There are no matches available right now...</p>
+                    <% } %>
+    
+            </div>
+          
+         </div>        
 
     </section>
     
-
     <%- include('includes/footer.ejs'); -%>
 </body>
