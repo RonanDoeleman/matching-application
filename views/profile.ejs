@@ -40,12 +40,12 @@
 
         <% if (matches) { %>
         <h2>My matches:</h2>
-        <Section>
+        <Section class="my-matches-container">
             <% matches.forEach(match => { %>
             <Article>
                 <img src=<%= match.image %> alt=<%= match.name %>/>
-                <p><%= match.name %></p>
-                <form action="/removeFromMatches" method="post" class="button-container">
+                <h3><%= match.name %></h3>
+                <form action="/removeFromMatches" method="post" class="button-container-profile">
                     <button name="removeMatchButton" type="submit" value="<%= match.id %>" >Delete</button>
                 </form>
             </Article>
