@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const userRouter = require('./public/routes/matches');
+const profileRouter = require('./public/routes/profile');
 const mongoose = require('mongoose');
 const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}${process.env.DATABASE_URI}`;
 const { Match }  = require('./public/routes/matchSchema');
@@ -39,38 +40,9 @@ app.get('/', (req, res) => {
   res.render('index', { text: 'Ronan,'})
 });
 
-// Alle users worden in de variable getUsers gezet. Het eerste element uit deze array,
-// wat het profiel is van de gebruiker, wordt eruit gehaald met shift() en in de variabele profile gezet.
-// getUsers filter zorgt ervoor dat alle id's in de array van de variabele matches wordt gezet.
+app.use('/matches', userRouter)
 
-app.get('/profile', async (req, res) => {
-  try {
-    const getUsers= await Match.find();
-    const profile = getUsers.shift();
-    
-    // Check in alle users of hun id overeenkomt met de gebruikers users id's, 
-    // zo ja haal dan hun volledige data op en voeg toe aan matches
-    const matches = getUsers.filter(user => profile.matches.find(id => id === user.id));
-
-    res.render('profile', { profile, matches})
-  } catch (error) {
-    console.error(error)
-  }  
-});
-
-// Met een button wordt in de database van id 7 de bijbehorende match verwijderd uit de array
-
-app.post('/removeFromMatches', async (req, res) => {
-  const removeMatchButton = req.body.removeMatchButton;
-  try { 
-    await Match.findOneAndUpdate({id: 7}, {$pull:{matches: Number(removeMatchButton)}});
-    console.log(removeMatchButton)
-
-  } catch (error) {
-    console.error(error)
-  }
-  res.redirect('/profile')
-});
+app.use('/profile', profileRouter)
 
 app.get('/about', (req, res) => {
   res.render('about', {text: 'About'})
@@ -79,8 +51,6 @@ app.get('/about', (req, res) => {
 app.get('/contact', (req, res) => {
   res.render('contact', {text: 'Contact'})
 });
-
-app.use('/matches', userRouter)
 
 // ******************
 // - 404 Error handler, if no page is found
