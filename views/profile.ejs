@@ -8,7 +8,6 @@
 <body>
     <%- include('includes/header'); -%>
 
-
     <section class="profile-page">
         <% if (profile) { %>
         <h1>Hi <%= profile.name %>,</h1>
@@ -38,17 +37,14 @@
             <Article>
                 <img src=<%= match.image %> alt=<%= match.name %>/>
                 <h3><%= match.name %></h3>
-                <form action="/removeFromMatches" method="post" class="button-container-profile">
+                <form action="/profile/removeFromMatches" method="post" class="button-container-profile">
                     <button name="removeMatchButton" type="submit" value="<%= match.id %>" >Delete</button>
                 </form>
             </Article>
             <% }) %>
         </Section>
         <% } %>
-
-        
     </section>
-
 
     <%- include('includes/footer.ejs'); -%>
 </body>
