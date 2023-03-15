@@ -1,6 +1,6 @@
 body{
     background-color: rgb(240, 240, 240);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "neuzeit-grotesk", Verdana, Geneva, Tahoma, sans-serif;;
     margin: 0;
 }
 
@@ -133,7 +133,7 @@ h1{
 
 .match-card p {
     font-size: 1.1em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "neuzeit-grotesk", Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(86, 86, 86);
 }
 
@@ -213,6 +213,7 @@ h1{
 
 .profile-metadata p {
     margin-bottom: .5em;
+    font-size: 1.3em;
 }
 
 /* Media Query's voor responsiveness */
@@ -241,12 +242,12 @@ h1{
     }
 
     .profile-metadata h2{
-        font-size: 1.3em;
+        font-size: 1.5em;
         padding-top: -2em;
     }
 
     .profile-metadata p{
-        font-size: 1em;
+        font-size: 1.2em;
     }
     
 }
@@ -267,6 +268,10 @@ h1{
 .my-profile img{
     height: 300px;
     border-radius: 50%;
+}
+
+.my-profile-metadata p{
+    font-size: 1.2em;
 }
 
 .my-profile-metadata h2{
