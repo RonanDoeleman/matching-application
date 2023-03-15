@@ -19,4 +19,12 @@ Met een matching feature krijg je profielen te zien van mensen, deze kan je dan 
 
 Om meer informatie te vinden over de ontwikkeling van deze applicatie kan je de [Wiki](https://github.com/RonanDoeleman/matching-application/wiki) bekijken.
 
+## Auteur
+
+Deze applicatie is gemaakt door Ronan Doeleman
+
+## License
+
+Deze applicatie heeft een 
+
 
