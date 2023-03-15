@@ -7,14 +7,15 @@ const matchSchema = new mongoose.Schema({
   name: String,
   location: String,
   age: String,
-  genres: [String],
+  favgenres: [String],
+  favtrack: String,
   favfestivals: [String],
   bio: String,
-  matches: [Number]
+  matches: [Number],
+  dislikes: [Number]
 });
 
 const Match =  mongoose.model('Match', matchSchema, "MatchesData");
-
 
 module.exports ={ 
   Match
