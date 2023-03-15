@@ -26,6 +26,6 @@ Deze applicatie is gemaakt door Ronan Doeleman
 
 ## License
 
-Deze applicatie heeft een 
+Deze applicatie heeft een license 
 
 
