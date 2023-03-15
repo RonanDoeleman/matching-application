@@ -128,7 +128,7 @@ h1{
 .match-card h2 {
     font-size: 2em;
     margin-bottom: .5em;
-    margin-top: 0;
+    margin-top: .5em;
 }
 
 .match-card p {
@@ -163,7 +163,8 @@ h1{
 .button-container {
     display: flex;
     justify-content: center;
-    gap: 2em;
+    gap: 1.5em;
+    margin-bottom: -.5em;
 }
 
 .match-card .like-button,
@@ -172,7 +173,7 @@ h1{
     height: 70px;
     overflow: hidden;
     border: none;
-    margin: 2em 0 2em 0;
+    margin: 1em 0 2em 0;
     cursor: pointer;
 }
 
@@ -198,13 +199,14 @@ h1{
     width: 101%;
     height: 350px;
     overflow: hidden;
+    margin-bottom: -1em;
 }
 
 .match-card .image-container img {
     width: 101%;
     height: auto;
     object-fit: cover;
-    margin-top: -6em;
+    margin-top: -8em;
 }
 
 .profile-metadata{
@@ -320,7 +322,7 @@ h1{
 }
 
 .my-matches-container h3{
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 article{
