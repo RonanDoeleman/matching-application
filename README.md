@@ -26,6 +26,6 @@ Deze applicatie is gemaakt door Ronan Doeleman
 
 ## License
 
-Deze applicatie heeft een license 
+Deze applicatie heeft een [MIT License](https://github.com/RonanDoeleman/matching-application/blob/main/LICENSE) 
 
 
