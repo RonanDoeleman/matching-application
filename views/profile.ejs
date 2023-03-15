@@ -12,29 +12,22 @@
     <section class="profile-page">
         <% if (profile) { %>
         <h1>Hi <%= profile.name %>,</h1>
+        <img src="/images/editing.png" class="edit-profile" alt="edit-profile">
 
         <section class="my-profile">
 
-            <img src=<%= profile.image %> alt=<%= profile.name %> >
+            <img src=<%= profile.image %> alt=<%= profile.name %> alt ="profile-image">
 
-            <ul label="About Me">
-                
-                <li><%= profile.age %></li>
-                <li><%= profile.location %></li>
-            </ul>
-            
-            <ol label="Genres">
-                <% profile.genres.forEach(genre => {%>
-                    <li><%= genre %></li>
-                <% }) %>
-            </ol>
-
-            <ol label="Festivals">
-                <% profile.favfestivals.forEach(festival => {%>
-                    <li><%= festival %></li>
-                <% }) %>
-            </ol>
-
+            <div class="my-profile-metadata">
+                <p><strong><%= profile.location %></strong>, <%= profile.age %></p>
+                <p><strong>Bio: </strong>"<%= profile.bio %>"</p>
+                <p><strong>Genres:</strong> <%= profile.favgenres.join(", ") %></p>
+                <p><strong>Festivals:</strong> <%= profile.favfestivals.join(", ") %></p>
+                <div class="profile-track">
+                    <img src="/images/playbutton.png" alt="playbutton">
+                    <p><strong><%= profile.favtrack %></strong></p>
+                </div>
+            </div>
         </section>
         <% } %>
 
