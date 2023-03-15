@@ -6,14 +6,15 @@ router.get('/', async (req, res) => {
 
     try {
         const getUsers = await Match.find();
-        // remove first item from array (in this case it's your own user)
+        // Haal de eerste user uit de Array (het gebruikersprofiel)
         const profile =  getUsers.shift();
-        // merge two arrays together
+        // Voeg twee arrays samen
         const seenMatches = profile.matches.concat(profile.dislikes);
-         // check if user id's do not include the id's from matches and dislikes (seenMatches)
+         // Check of de user id's niet de id's van de matches en dislikes bevatten (seenMatches)
         const potentialMatches = getUsers.filter(user => !seenMatches.includes(user.id))
-       
+    
         res.render('matches', {name: 'Find Match', potentialMatches, profile})
+
       } catch (error) {
         console.error(error)
       }
@@ -28,26 +29,25 @@ router.post('/match', async (req, res) => {
   const matchButtonLike = req.body.matchButtonLike;
   const matchButtonDislike = req.body.matchButtonDislike;
      
-      if(matchButtonLike){
-        try {
-          await Match.findOneAndUpdate({id: 7}, {$addToSet:{matches: Number(matchButtonLike)}}, {
-            new: true
+    if(matchButtonLike){
+      try {
+        await Match.findOneAndUpdate({id: 7}, {$addToSet:{matches: Number(matchButtonLike)}}, {
+          new: true
 
-          })
-        } catch(error) {
+        })
+      } catch(error) {
           console.error(error)
-        }
-      } else {
-        try {
-          await Match.findOneAndUpdate({id: 7}, {$addToSet:{dislikes: Number(matchButtonDislike)}}, {
-              new: true
-          })
-        } catch(error) {
-          console.error(error)
-        }
       }
+    } else {
+      try {
+        await Match.findOneAndUpdate({id: 7}, {$addToSet:{dislikes: Number(matchButtonDislike)}}, {
+          new: true
+          })
+      } catch(error) {
+          console.error(error)
+      }
+    }
     res.redirect('/matches')
-  
-})
+});
 
 module.exports =  router
