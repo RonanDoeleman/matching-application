@@ -16,6 +16,9 @@ Met een matching feature krijg je profielen te zien van mensen, deze kan je dan 
 - Matchen en verwijderen
 - Muziekprofiel bekijken
 
+## Schermen
+
+
 ## Wiki
 
 Om meer informatie te vinden over de ontwikkeling van deze applicatie kan je de [Wiki](https://github.com/RonanDoeleman/matching-application/wiki) bekijken.
