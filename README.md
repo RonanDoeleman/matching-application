@@ -1,5 +1,6 @@
 # matching-application
-This is a repository for my matching application assignment
+
+![logo-match](https://user-images.githubusercontent.com/56078226/225392113-435a3d36-d16a-41fa-b722-f6d8f500fc28.png)
 
 ## Festi Match ❤️🎉
 
