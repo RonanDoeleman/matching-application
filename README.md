@@ -48,7 +48,7 @@ Om meer informatie te vinden over de ontwikkeling van deze applicatie kan je de 
 
 ## Auteur
 
-Deze applicatie is gemaakt door Ronan Doeleman
+Deze applicatie is gemaakt door [Ronan Doeleman](https://github.com/RonanDoeleman)
 
 ## License
 
