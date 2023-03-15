@@ -18,7 +18,7 @@ Met een matching feature krijg je profielen te zien van mensen, deze kan je dan 
 
 ## Schermen
 
-![Schermen](https://user-images.githubusercontent.com/56078226/225396009-c81faeab-685b-43e3-a894-b528b3e9a071.png)
+![appschermen](https://user-images.githubusercontent.com/56078226/225440580-c58ef855-e56c-4d96-bf3f-ccf3ced2ae2b.png)
 
 ## Hoe run je de applicatie?
 
