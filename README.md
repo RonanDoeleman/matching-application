@@ -20,6 +20,28 @@ Met een matching feature krijg je profielen te zien van mensen, deze kan je dan 
 
 ![Schermen](https://user-images.githubusercontent.com/56078226/225396009-c81faeab-685b-43e3-a894-b528b3e9a071.png)
 
+## Hoe run je de applicatie?
+
+- Stap 1. Clone de Wiki
+
+```git@github.com:RonanDoeleman/matching-application.git```
+
+- Stap 2. Ga naar de map op je computer
+
+```cd matching-application```
+
+- Stap 3. Installeer NPM
+
+```npm install```
+
+- Stap 4. Download [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/lp/try4?utm_source=google&utm_campaign=search_gs_pl_evergreen_atlas_core-high-int_prosp-brand_gic-null_emea-nl_ps-all_desktop_eng_lead&utm_term=mongodb%20atlas&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=19628148417&adgroup=149347432527&cq_cmp=19628148417&gclid=EAIaIQobChMIpJyczL_e_QIVWvZ3Ch2ekwhREAAYASAAEgJKc_D_BwE)
+
+- Stap 5. In het .env verander de DATABASE_URI en DATABASE_NAME
+
+- Stap 6. Start de applicatie
+
+```npm start```
+
 ## Wiki
 
 Om meer informatie te vinden over de ontwikkeling van deze applicatie kan je de [Wiki](https://github.com/RonanDoeleman/matching-application/wiki) bekijken.
