@@ -1,3 +1,9 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
 body{
     background-color: rgb(240, 240, 240);
     font-family:Arial, Helvetica, sans-serif;
@@ -73,11 +79,6 @@ h1{
     font-size: 2em;
 }
 
-h2 {
-    font-size: 1.5em;
-    margin-bottom: 2em;
-}
-
 .btn-find-match {
   align-items: center;
   background: linear-gradient(135deg, hsla(348, 100%, 61%, 1) 0%, hsla(326, 100%, 78%, 1) 100%);
@@ -95,36 +96,60 @@ h2 {
   cursor: pointer;
 }
 
-/* .potential-match  {
+.potential-match  {
+    height: 70vh;
     display: flex;
     justify-content: center;
-    padding: 0 4em;
-} */
+    padding: 2em 4em;
+    position: relative;
+} 
 
-/* .profile-match-container {
-    height: 500px;
-    width: auto;
-    aspect-ratio: 2/3;
-} */
-
-.profile-match-container{
-    width: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2em;
-}
-
-
-.profile-match {
+.match-card {
+    position: absolute;
     display: flex; 
     flex-direction: column;
     border: 1px solid grey;
     background-color: #eeeeee;
-    height: 100%;
-    width:100%;
+    height: 700px;
+    width: 440px;
     border-radius: 10px;
     overflow: hidden;
-    filter: drop-shadow(2px 2px 10px rgba(26, 26, 26, 0.5));
+    filter: drop-shadow(2px 2px 10px rgba(26, 26, 26, 0.1));
+}
+
+.match-card h2 {
+    font-size: 2em;
+    margin-bottom: .5em;
+    margin-top: 0;
+}
+
+.match-card p {
+    font-size: 1.1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(86, 86, 86);
+}
+
+.track{
+    display: flex;
+    align-items: center;
+    padding: .25em;
+    margin-top: 1em;
+    border-radius: 8px;
+    border: 1px solid rgb(181, 181, 181);
+}
+
+.track img{
+    width: 40px;
+    height: 40px;
+    margin-right: 1em;
+    align-self: center;
+    margin-left: .2em;
+    cursor: pointer;
+}
+
+.track p{
+    color: black;
+    text-align: center;
 }
 
 .button-container {
@@ -133,55 +158,87 @@ h2 {
     gap: 2em;
 }
 
-.profile-match .like-button,
-.profile-match .dislike-button {
-    width: 50px;
-    height: 50px;
+.match-card .like-button,
+.match-card .dislike-button {
+    width: 70px;
+    height: 70px;
     overflow: hidden;
     border: none;
+    margin: 2em 0 2em 0;
+    cursor: pointer;
 }
 
-.profile-match .like-button img,
-.profile-match .dislike-button  img{
+.match-card .like-button img,
+.match-card .dislike-button  img{
     width: 100%;
     height: auto;
 }
 
 .like-button:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: 1.1s;
     cursor: pointer;
 }
 
-.profile-match .image-container {
-    width: 100%;
+.dislike-button:hover{
+    transform: scale(.9);
+    transition: 1.1s;
+    cursor: pointer;
+}
+
+.match-card .image-container {
+    width: 101%;
     height: 350px;
     overflow: hidden;
 }
 
-.profile-match .image-container img {
-    width: 100%;
+.match-card .image-container img {
+    width: 101%;
     height: auto;
     object-fit: cover;
-    margin-top: -4em;
+    margin-top: -6em;
 }
 
 .profile-metadata{
-    margin-left: 1em;
+    padding: 1em;
 }
 
-.radio-buttons{
-    display: flex;
-    right: 0;
+.profile-metadata p {
+    margin-bottom: .5em;
 }
 
-.radio-buttons img{
-    width: 50px;
-    height: 50px;
-}
+@media screen and (max-width: 650px) {
 
-div.radio-buttons{
-    align-items: center;
+    .match-card{
+        width: 400px;
+        height: 600px;
+    }
+
+    .match-card .image-container{
+        width: 100%;
+        height: 220px;
+    }
+
+    .match-card .image-container img{
+        margin-top: -8em;
+        height: auto;
+    }
+
+    .match-card .like-button,
+    .match-card .dislike-button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .profile-metadata h2{
+        font-size: 1.3em;
+        padding-top: -2em;
+    }
+
+    .profile-metadata p{
+        font-size: 1em;
+    }
+    
 }
 
 .index-page,
@@ -191,47 +248,61 @@ div.radio-buttons{
 .contact-page,
 .matchmaker-page {
     padding: 2em;
-    margin-bottom: 5em;
-}
-
-.about-page p{
-    max-width: 70%;
+    margin-bottom: 10em;
 }
 
 .my-profile{
-    border: 1px solid grey;
-    display: flex;
+    margin-bottom: 4em;
+}
+
+.edit-profile{
+    width: 25px;
+    height: 25px;
+    opacity: .5;
+    float: right;
 }
 
 .my-profile img{
-    width: 200px;
-    height: 260px;
+    height: 300px;
+    border-radius: 50%;
 }
 
-.my-profile ul{
-    list-style: none;
+.my-profile-metadata h2{
+    margin-top: 0;
 }
 
-.my-profile ol{
-    list-style: none;
+.profile-track{
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    padding: .25em;
+    margin-top: 1em;
+    border-radius: 8px;
+    border: 1px solid rgb(181, 181, 181);
 }
 
-.my-profile ul li,
-.my-profile ol li{
-    font-size: 1.2em;
+.profile-track img{
+    width: 40px;
+    height: 40px;
+    margin-right: 1em;
+    cursor: pointer;
 }
 
-.my-profile ul li,
-.my-profile ol li{
-    margin-top: .8em;
-}
-
-.my-profile ul::before,
-.my-profile ol::before {
-    content:attr(label);
-    font-size: 1.5em;
+.profile-track p {
     font-weight: bold;
-    font-style: italic;
+}
+
+@media screen and (min-width: 650px) {
+
+    .my-profile{
+        display: flex;
+    }
+
+    .my-profile-metadata{
+        margin-left: 2em;
+        align-self: center;
+    }
+    
 }
 
 .my-matches-container{
@@ -269,6 +340,30 @@ article{
     border-radius: 50%;
     width: 200px;
     height: 200px;
+}
+
+@media screen and (max-width: 750px) {
+
+    .my-matches-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .my-matches-container button{
+        font-size: .8em;
+        padding: 1em 1.5em;
+    }
+
+    .my-matches-container img{
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+    }
+    
+}
+
+.about-page p{
+    max-width: 70%;
 }
 
 /* Footer Styling */

@@ -6,7 +6,8 @@
         "location":"Amsterdam",
         "country":"The Netherlands",
         "age":"23",
-        "genres":["Techno","Industrial","Hip-Hop"],
+        "favgenres":["Techno","Industrial","Hip-Hop"],
+        "favtrack":"Ornviom - LRS04",
         "favfestivals":["Rotterdam Rave","Soenda","Smeerboel","Verknipt","Woo Hah"],
         "bio":"One party is better than no party",
         "matches":[{"$numberInt":"5"}]
@@ -16,7 +17,8 @@
         "name": "Marieke",
         "location": "Hoofddorp",
         "age": "22",
-        "genres": ["Techno", "Tech-House"],
+        "favgenres": ["Techno", "Tech-House"],
+        "favtrack":"Hunting Heretics - Inquisition ",
         "favfestivals": ["Rotterdam Rave", "Soenda"],
         "bio": "Exploring the world",
         "matches": [{ "id" : 7, "hasLiked" : true }] 
@@ -26,7 +28,8 @@
         "name": "Amber",
         "location": "Lisse",
         "age": "20",
-        "genres":[ "Hip-Hop", "R&B"],
+        "favgenres":[ "Hip-Hop", "R&B"],
+        "favtrack":"Lil Baby - Drip Too Hard",
         "favfestivals": ["Woo Hah" ,"Vunzige Deuntjes"],
         "bio": "Live, Laugh, Love",
         "matches": [{ "id" : 7, "hasLiked" : true }] 
@@ -36,7 +39,8 @@
         "name": "Lisa",
         "location": "Amsterdam",
         "age": "23",
-        "genres": ["Hardcore" ,"Industrial"],
+        "favgenres": ["Hardcore" ,"Industrial"],
+        "favtrack":"Cekta - Cobs",
         "favfestivals": ["PRSPCT Festival", "Smeerboel"],
         "bio": "Lets dance till dawn",
         "matches": [{ "id" : 7, "hasLiked" : true }] 
@@ -46,7 +50,8 @@
         "name": "Charissa",
         "location": "Alkmaar",
         "age": "24",
-        "genres": ["Techno", "Urban"],
+        "favgenres": ["Techno", "Urban"],
+        "favtrack":"Amelie Lens - Exhale ",
         "favfestivals": ["Verknipt" ,"Appelsap"],
         "bio": "Carpe Diem",
         "matches": [{ "id" : 7, "hasLiked" : true }]  
@@ -56,7 +61,8 @@
         "name": "Alisa",
         "location": "Utrecht",
         "age": "27",
-        "genres":["Klassiek", "Modern"],
+        "favgenres":["Klassiek", "Modern"],
+        "favtrack":"Symphony XX - Bach",
         "favfestivals": ["Bach in Symphony XII", "Candle Lights"],
         "bio": "Lets enjoy music together!",
         "matches": [{ "id" : 7, "hasLiked" : true }] 
@@ -66,7 +72,8 @@
         "name": "Sara",
         "location": "Leiden",
         "age": "22",
-        "genres":["House", "Techno"],
+        "favgenres":["House", "Techno"],
+        "favtrack":"ANOTR - Burnin ",
         "favfestivals": ["Joy", "Thuishaven"],
         "bio": "Lets enjoy music together!",
         "matches": [{ "id" : 7, "hasLiked" : true }] 
