@@ -2,9 +2,9 @@ const express = require('express')
 const router = express.Router()
 const { Match }  = require('./matchSchema')
 
-// Alle potentiele matches worden in de variable getMatches gezet. Het eerste element uit deze array,
+// Alle potentiele matches worden in de variable getUsers gezet. Het eerste element uit deze array,
 // wat het profiel is van de gebruiker, wordt eruit gehaald met shift en in de variabele profile gezet.
-// getMatches filter zorgt ervoor dat alle id's in de array van de variabele matches wordt gezet.
+// getUsers filter zorgt ervoor dat alle id's in de array van de variabele matches wordt gezet.
 
 router.get('/', async (req, res) => {
     try {
@@ -14,13 +14,13 @@ router.get('/', async (req, res) => {
       // zo ja haal dan hun volledige data op en voeg toe aan matches
       const matches = getUsers.filter(user => profile.matches.find(id => id === user.id))
   
-      res.render('profile', { profile, matches})
+      res.render('profile', {profile, matches})
     } catch (error) {
       console.error(error)
     }
 });
   
-  // Met een button wordt in de database van id 7 de bijbehorende match verwijderd uit de array
+// Met een button wordt in de database van id 7 de bijbehorende match verwijderd uit de array
   
 router.post('/removeFromMatches', async (req, res) => {
     const removeMatchButton = req.body.removeMatchButton
