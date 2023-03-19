@@ -78,7 +78,8 @@ h1{
 .profile-page,
 .about-page,
 .contact-page,
-.matchmaker-page {
+.matchmaker-page,
+.error-page {
     padding: 2em;
     margin-bottom: 10em;
 }
@@ -354,7 +355,8 @@ article{
 }
 
 .index-page p,
-.about-page p{
+.about-page p,
+.error-page p{
     max-width: 60%;
     font-size: 1.4em;
 }
