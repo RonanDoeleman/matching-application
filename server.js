@@ -2,11 +2,11 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const port = 3000;
-const userRouter = require('./public/routes/matches');
-const profileRouter = require('./public/routes/profile');
+const userRouter = require('./routes/matches');
+const profileRouter = require('./routes/profile');
 const mongoose = require('mongoose');
 const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}${process.env.DATABASE_URI}`;
-const { Match }  = require('./public/routes/matchSchema');
+const { Match }  = require('./routes/matchSchema');
 
 async function main() {
     await mongoose.connect(uri,{
@@ -56,8 +56,8 @@ app.get('/contact', (req, res) => {
 // - 404 Error handler, if no page is found
 // ******************
 
-app.use((req, res) => {
-    res.status(404).send('Unfortunately we did not find the page you were looking for');
+app.use(function (req, res) {
+  res.status(400).render('404')
 });
 
 // ******************
