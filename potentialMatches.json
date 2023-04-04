@@ -10,7 +10,8 @@
         "favtrack":"Ornviom - LRS04",
         "favfestivals":["Rotterdam Rave","Soenda","Smeerboel","Verknipt","Woo Hah"],
         "bio":"One party is better than no party",
-        "matches":[{"$numberInt":"5"}]
+        "matches":[{"$numberInt":"5"}],
+        "dislikes": []
     },
     {   "id": 1,
         "image": "https://images.unsplash.com/photo-1601288496920-b6154fe3626a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
@@ -21,7 +22,8 @@
         "favtrack":"Hunting Heretics - Inquisition ",
         "favfestivals": ["Rotterdam Rave", "Soenda"],
         "bio": "Exploring the world",
-        "matches": [{ "id" : 7, "hasLiked" : true }] 
+        "matches": [{ "id" : 7, "hasLiked" : true }],
+        "dislikes": [] 
     },
     {   "id": 2,
         "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80",
@@ -32,7 +34,8 @@
         "favtrack":"Lil Baby - Drip Too Hard",
         "favfestivals": ["Woo Hah" ,"Vunzige Deuntjes"],
         "bio": "Live, Laugh, Love",
-        "matches": [{ "id" : 7, "hasLiked" : true }] 
+        "matches": [{ "id" : 7, "hasLiked" : true }],
+        "dislikes": []  
     },
     {   "id": 3,
         "image": "https://images.unsplash.com/photo-1516195851888-6f1a981a862e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=705&q=80",
@@ -43,7 +46,8 @@
         "favtrack":"Cekta - Cobs",
         "favfestivals": ["PRSPCT Festival", "Smeerboel"],
         "bio": "Lets dance till dawn",
-        "matches": [{ "id" : 7, "hasLiked" : true }] 
+        "matches": [{ "id" : 7, "hasLiked" : true }],
+        "dislikes": [] 
     },
     {   "id": 4,
         "image": "https://images.unsplash.com/photo-1584720223124-466ff369e7c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
@@ -54,7 +58,8 @@
         "favtrack":"Amelie Lens - Exhale ",
         "favfestivals": ["Verknipt" ,"Appelsap"],
         "bio": "Carpe Diem",
-        "matches": [{ "id" : 7, "hasLiked" : true }]  
+        "matches": [{ "id" : 7, "hasLiked" : true }],
+        "dislikes": []  
     },
     {   "id": 5,
         "image": "https://images.unsplash.com/photo-1620279765075-91d8a7a1d007?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
@@ -65,7 +70,8 @@
         "favtrack":"Symphony XX - Bach",
         "favfestivals": ["Bach in Symphony XII", "Candle Lights"],
         "bio": "Lets enjoy music together!",
-        "matches": [{ "id" : 7, "hasLiked" : true }] 
+        "matches": [{ "id" : 7, "hasLiked" : true }],
+        "dislikes": []  
     },
     {   "id": 6,
         "image": "https://images.unsplash.com/photo-1520699918507-3c3e05c46b0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=734&q=80",
@@ -76,6 +82,7 @@
         "favtrack":"ANOTR - Burnin ",
         "favfestivals": ["Joy", "Thuishaven"],
         "bio": "Lets enjoy music together!",
-        "matches": [{ "id" : 7, "hasLiked" : true }] 
+        "matches": [{ "id" : 7, "hasLiked" : true }],
+        "dislikes": []  
     }
 ]}
