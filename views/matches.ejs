@@ -25,13 +25,13 @@
                             </div>
                             <div class="profile-metadata">
                                 <h2><%= match.name %></h2>
-                                <p><strong><%= match.location %></strong>, <%= match.age %></p>
-                                <p><strong>Bio: </strong>"<%= match.bio %>"</p>
-                                <p><strong>Genres:</strong> <%= match.favgenres.join(", ") %></p>
-                                <p><strong>Festivals:</strong> <%= match.favfestivals.join(", ") %></p>
+                                <p><%= match.location %>, <%= match.age %></p>
+                                <p><span>Bio: </span> "<%= match.bio %>"</p>
+                                <p><span>Genres: </span><%= match.favgenres.join(", ") %></p>
+                                <p><span>Festivals: </span> <%= match.favfestivals.join(", ") %></p>
                                 <div class="track">
                                     <img src="/images/playbutton.png" alt="playbutton">
-                                    <p><strong><%= match.favtrack %></strong></p>
+                                    <p><%= match.favtrack %></p>
                                 </div>
                             </div>
                             <form action="/matches/match" method="post" class="button-container">

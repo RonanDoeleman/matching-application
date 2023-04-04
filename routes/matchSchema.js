@@ -15,6 +15,6 @@ const matchSchema = new mongoose.Schema({
   dislikes: [Number]
 });
 
-const Match =  mongoose.model('Match', matchSchema, "MatchesData");
+const Match =  mongoose.model('Match', matchSchema, "MatchData");
 
 module.exports = { Match };
