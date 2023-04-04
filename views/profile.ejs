@@ -19,14 +19,33 @@
             <img src=<%= profile.image %> alt=<%= profile.name %> alt ="profile-image">
 
             <div class="my-profile-metadata">
-                <p><strong><%= profile.location %></strong>, <%= profile.age %></p>
-                <p><strong>Bio: </strong>"<%= profile.bio %>"</p>
-                <p><strong>Genres:</strong> <%= profile.favgenres.join(", ") %></p>
-                <p><strong>Festivals:</strong> <%= profile.favfestivals.join(", ") %></p>
+                <p><%= profile.location %>, <%= profile.age %></p>
+                <p><span>Bio:</span> "<%= profile.bio %>"</p>
+                <p><span>Genres:</span> <%= profile.favgenres.join(", ") %></p>
+                <p><span>Festivals:</span> <%= profile.favfestivals.join(", ") %></p>
                 <div class="profile-track">
-                    <img src="/images/playbutton.png" alt="playbutton">
-                    <p><strong><%= profile.favtrack %></strong></p>
+                    <audio autoplay autoplay-policy="no-user-gesture-required" id="audio" controls src="/audio/Enrico Sangiuliano - Moon Rocks.mp3"></audio>
+                    <p><%= profile.favtrack %></p>
                 </div>
+            </div>
+            <div class="edit-audio-file">
+            <h3>Play With Audio File:</h3>
+                <button id="play-button" onclick="play()" type="button">Play</button>
+                <button onclick="pause()" type="button">Pause</button>
+
+                <p>Volume:</p>
+                <input type="range" id="volume" min="0" max="2" value="1" step="0.01" />
+                
+                <p>Auto pan:</p>
+                    <div class="panner">
+                        <p>Left</p>
+                        <input type="range" id="panner" min="-1" max="1" value="0" step="0.01" />
+                        <p>Right</p>
+                    </div>
+
+                <button onclick="setPlaySpeedSlow()" type="button">Slowmotion</button>
+                <button onclick="setPlaySpeedNormal()" type="button">Normal</button>
+                <button onclick="setPlaySpeedFast()" type="button">Faster</button>
             </div>
         </section>
         <% } %>
@@ -48,4 +67,7 @@
     </section>
 
     <%- include('includes/footer.ejs'); -%>
+
+    <script src="/js/script.js"></script>
+
 </body>
