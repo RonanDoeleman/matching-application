@@ -24,7 +24,10 @@
                 <p><span>Genres:</span> <%= profile.favgenres.join(", ") %></p>
                 <p><span>Festivals:</span> <%= profile.favfestivals.join(", ") %></p>
                 <div class="profile-track">
-                    <audio autoplay autoplay-policy="no-user-gesture-required" id="audio" controls src="/audio/Enrico Sangiuliano - Moon Rocks.mp3"></audio>
+                    <audio autoplay autoplay-policy="no-user-gesture-required" id="audio" 
+                        controls src="/audio/Enrico Sangiuliano - Moon Rocks.mp3">
+                        Your browser does not support the audio element unfortunately :(
+                    </audio>
                     <p><%= profile.favtrack %></p>
                 </div>
             </div>
