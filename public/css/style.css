@@ -219,6 +219,10 @@ h1{
     font-size: 1.3em;
 }
 
+.profile-metadata span{
+    font-weight: 900;
+}
+
 /* Media Query's voor responsiveness */
 
 @media screen and (max-width: 650px) {
@@ -266,6 +270,7 @@ h1{
     height: 25px;
     opacity: .5;
     float: right;
+    cursor: pointer;
 }
 
 .my-profile img{
@@ -284,7 +289,7 @@ h1{
 .profile-track{
     display: flex;
     align-items: center;
-    max-width: 500px;
+    max-width: 550px;
     padding: .25em;
     margin-top: 1em;
     border-radius: 8px;
@@ -294,7 +299,6 @@ h1{
 .profile-track img{
     width: 40px;
     height: 40px;
-    margin-right: 1em;
     cursor: pointer;
 }
 
@@ -302,16 +306,29 @@ h1{
     font-weight: bold;
 }
 
+.my-profile-metadata span{
+    font-weight: 900;
+}
+
+.panner{
+    display: flex;
+}
+
+.edit-audio-file{
+    padding: 1em;
+    align-self: center;
+}
+
 /* Media Query's voor responsiveness */
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 1100px) {
 
     .my-profile{
         display: flex;
+        justify-content: space-between;
     }
 
     .my-profile-metadata{
-        margin-left: 2em;
         align-self: center;
     }
     
@@ -368,6 +385,10 @@ article{
     .my-matches-container{
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .edit-audio-file{
+        margin-left: 0;
     }
 
     .my-matches-container button{
