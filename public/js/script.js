@@ -1,9 +1,13 @@
-let audio = document.getElementById("audio");
+const audio = document.getElementById("audio");
+
+// Buttons functioneel maken zodat de gebruiker de audio kan manipuleren
 
 function play() {
     audio.play();
     audioContext.resume();
 }
+
+audio.autoplay = false;
 
 function pause() {
     audio.pause();
@@ -21,6 +25,7 @@ function setPlaySpeedFast() {
     audio.playbackRate = 1.3
 } 
 
+// Creëer nieuwe instantie van Audio context uit de Web Audio API
 const audioContext = new AudioContext();
 
 // Pak het audio element uit de profile.ejs
@@ -34,8 +39,10 @@ const gainNode = audioContext.createGain();
 
 track.connect(gainNode).connect(audioContext.destination);
 
+// Pak de volume regelaar uit de EJS
 const volumeControl = document.querySelector("#volume");
 
+// Pas het volume aan als je de volumeControl gebruikt
 volumeControl.addEventListener(
   "input",
   () => {
@@ -45,6 +52,7 @@ volumeControl.addEventListener(
 );
 
 // Met een panner kan je aangeven welke speaker je wil aanspreken (links of rechts)
+// pan: 0 is gebalanceerd (links en rechts)
 const pannerOptions = { pan: 0 };
 const panner = new StereoPannerNode(audioContext, pannerOptions);
 
@@ -59,3 +67,4 @@ pannerControl.addEventListener(
 );
 
 track.connect(gainNode).connect(panner).connect(audioContext.destination);
+
